@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div>
+        Objective: Move from the top-left to the bottom-right of the grid (the goal).<br>
+        Movement: Use the arrow keys (Up, Down, Left, Right) to move the player.<br>
+        Obstacles: Avoid obstacles and move in light pahse —Game Over if you collide with one .<br>
+        Goal: Reach the bottom-right corner to win the game.
+    </div>
+    <div id="game-container">
+        <h1>Maze Game</h1>
+        <div id="game-board"></div>
+        <div id="game-info">
+            <p>Time: <span id="timer">0</span> seconds</p>
+            <p id="game-message"></p>
+            <button id="restart-button" style="display:none;" onclick="restartGame()">Restart Game</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

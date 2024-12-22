@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#game-container {
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 500px;
+}
+
+h1 {
+    font-size: 2em;
+    color: inherit; /* Inherit color from body */
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    height: 300px;
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.cell.obstacle {
+    background-color: rgb(255, 0, 0);
+}
+
+#game-info {
+    margin-top: 20px;
+}
+
+#game-message {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#restart-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+}
+
+/* Light mode */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode .cell {
+    background-color: lightgray;
+}
+
+.light-mode .cell.obstacle {
+    background-color: #ff0000; /* Brown for obstacles */
+}
+
+.light-mode #game-board {
+    border: 1px solid black;
+}
+
+/* Dark mode */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .cell {
+    background-color: #333;
+}
+
+.dark-mode .cell.obstacle {
+    background-color: #ff0000; /* Darker brown for obstacles */
+}
+
+.dark-mode #game-board {
+    border: 1px solid white;
+}
